@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>curent date</title>
+    </head>
+    <body>
+        <h1>Currentt date in words </h1>
+        <p id="dateinwords"></p>
+        <script>
+            const days=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","saturday"];
+            const monthsofYear=["January","February","March","April","may","June","July","August","September","October","November","December"];
+
+            const currentDate = new Date();
+
+            const day=days[(currentDate.getDay())]
+            const month=monthsofYear[(currentDate.getMonth())]
+            const date=currentDate.getDate();
+            const year=currentDate.getFullYear();
+
+            const currinword=`${day} ${date} ${month} ${year} `;
+
+            document.getElementById("dateinwords").textContent="Current Date :"+currinword;
+        </script>
+    </body>
+
+</html>

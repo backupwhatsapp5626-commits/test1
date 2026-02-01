@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>prog3</title>
+        <style>
+            #layer1{position: absolute;top: 50px; left: 40px;}
+            #layer2{position: absolute;top: 50px; left: 400px;}
+            #layer3{position: absolute;top: 50px; left: 800px;}
+        </style>
+        <script type="text/javascript">
+            function moveimg(layerId)
+            {
+                var left=window.prompt="Enter top value : ";
+                var top=window.prompt="Enter left value :";
+                document.getElementById(layerId).value.style.top=top+'px';
+                document.getElementById(layerId).value.style.left=left+'px';
+
+            }
+        </script>
+    </head>
+    <body>
+        <div id="layer1">
+            <img style="height :50px;width:60px";
+        </div>
+    </body>
+</html>
