@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>prog2</title>
+        <script>
+            function evaluateExpression()
+            {
+                const exp=document.getElementById("exp").value;
+                try{
+                    const result=eval(exp)
+                    document.getElementById("result").textContent="Result : "+result;
+
+                }
+                catch(error)
+                {
+                    document.getElementById("result").textContent="invalid expression or operation";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+        <h1>Mathematical Expression Evaluator </h1>
+        Enter a mathematical Expression :
+        <input type="text" id="exp">
+        <input type="button" onclick="evaluateExpression()" value="Evaluate">
+        <p id="result">5</p>
+        
+    </body>
+
+</html>

@@ -1,0 +1,49 @@
+<html>
+<head>
+    <title>test1</title>
+</head>
+<body>
+    <form method="post" onsubmit="return validateForm()">
+        Email:
+        <input type="text" id="mail" placeholder="Enter Email"><br><br>
+        Mobile:
+        <input type="text" id="mob" placeholder="Enter Mobile number "><br><br>
+        Address: 
+        <input type="text" id="add" placeholder="Enter Address"><br><br>
+        
+        Gender:<br>
+        <input type="radio" id="male" name="gender">Male<br>
+        <input type="radio" id="female" name="gender">Female<br><br>
+        
+        Interest:<br>
+        <input type="checkbox" id="music">Music<br>
+        <input type="checkbox" id="sports">Sports<br><br>
+        
+        <input type="submit" value="submit">
+    </form>
+
+    <script>
+        function validateForm() {
+            const email = document.getElementById("mail").value.trim();
+            const mobile = document.getElementById("mob").value.trim();
+            const address = document.getElementById("add").value.trim();
+            
+            const pattern = /^[A-Za-z0-9._%+-]+@[A-Za-z]+\.[A-Za-z]{2,3}$/;
+
+            if (email === '' || mobile === '' || address === '') {
+                alert("Please enter all fields");
+                return false;
+            } else if (!pattern.test(email)) {
+                alert("Invalid email id");
+                return false;
+            } else if (mobile.length < 10) {
+                alert("Please enter at least 10 digits for mobile number");
+                return false;
+            } else {
+                alert("Form submitted successfully!");
+                return true;
+            }
+        }
+    </script>
+</body>
+</html>
